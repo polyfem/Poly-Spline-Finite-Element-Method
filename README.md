@@ -76,6 +76,7 @@ We created a simple [jupyter notebook](https://github.com/polyfem/Poly-Spline-Fi
 ## Binder
 
 This notebook can be interactively run with binder! It is a free service and it is slow.
+
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/polyfem/Poly-Spline-Finite-Element-Method/master?filepath=Poly-Spline-Finite-Element-Method.ipynb)
 
 
