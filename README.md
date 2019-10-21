@@ -36,6 +36,11 @@ You can then run the UI with
 ```bash
 ./PolyFEM_bin
 ```
+
+:exclamation: The default function in polyfem is the Franke function. For this work we used an **old variation** of it. To reproduce the data select *FrankeOld* from the problem dropdown.
+![Problem selection](problem.png)
+
+
 load the mesh and click the "run all" button.
 
 To enable splines check the "spline" checkbox. Similarly you can use quadratic bases by increasing "discr" from 1 to 2.
@@ -49,7 +54,7 @@ You need to create a JSON file with the configuration
 {
     "mesh": <path to the mesh>,
     "discr_order": 1/2,
-    "problem": "Franke",
+    "problem": "FrankeOld",
     "quadrature_order": 4,
     "scalar_formulation": "Laplacian",
     "solver_type": "Eigen::UmfPackLU",
@@ -71,6 +76,7 @@ You can then see the *solution.vtu* using Paraview.
 # Python
 
 We created a simple [jupyter notebook](https://github.com/polyfem/Poly-Spline-Finite-Element-Method/blob/master/Poly-Spline-Finite-Element-Method.ipynb) with an example to generate Fig 13.
+:exclamation: The problem *FrankeOld* is not yet available on the conda version of Polyfem. This however doesn't change how to use Polyfem, stay tuned for updates.
 
 
 ## Binder
