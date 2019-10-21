@@ -76,6 +76,7 @@ You can then see the *solution.vtu* using Paraview.
 # Python
 
 We created a simple [jupyter notebook](https://github.com/polyfem/Poly-Spline-Finite-Element-Method/blob/master/Poly-Spline-Finite-Element-Method.ipynb) with an example to generate Fig 13.
+
 :exclamation: The problem *FrankeOld* is not yet available on the conda version of Polyfem. This however doesn't change how to use Polyfem, stay tuned for updates.
 
 
