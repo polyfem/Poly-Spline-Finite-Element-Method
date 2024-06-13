@@ -4,9 +4,9 @@
         "advanced": {
             "normalize_mesh": true
         },
-        "mesh": "meshes/cube_twist10.HYBRID",
-        "n_refs": 1,
-        "surface_selection": 1
+        "mesh": "meshes/block.HYBRID",
+        "surface_selection": 1,
+        "n_refs": 1
     },
     "tests": {
         "err_h1": 1.095094756180249,
