@@ -21,6 +21,7 @@
         "json": "sim.json",
         "paraview": {
             "file_name": "sim.vtu",
+            "high_order_mesh": false,
             "options": {
                 "discretization_order": true
             }
