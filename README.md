@@ -17,6 +17,9 @@ This repository contains the scripts to regenerate the figures in the paper:
 }
 ```
 
+This branch contains updated scripts. For the original check the [original](https://github.com/polyfem/Poly-Spline-Finite-Element-Method/tree/original) branch.
+
+
 # CPP installation
 
 First clone the polyfem repository:
@@ -29,42 +32,6 @@ and follow the instructions to compile it.
 
 **Note** the examples in the paper use Padiso which requires a licence. It is free for academia or can be obtained trough MKL. This is however not necessary to reproduce the data.
 
-
-## UI
-
-You can then run the UI with
-```bash
-./PolyFEM_bin
-```
-
-:exclamation: The default function in polyfem is the Franke function. For this work we used an **old variation** of it. To reproduce the data select *FrankeOld* from the problem dropdown.
-![Problem selection](problem.png)
-
-
-load the mesh and click the "run all" button.
-
-To enable splines check the "spline" checkbox. Similarly you can use quadratic bases by increasing "discr" from 1 to 2.
-![Spline checkbox](ui.png)
-
-## Command line
-
-You can run the same experiment trough the command line.
-You need to create a JSON file with the configuration
-```json
-{
-    "mesh": <path to the mesh>,
-    "discr_order": 1/2,
-    "problem": "FrankeOld",
-    "quadrature_order": 4,
-    "scalar_formulation": "Laplacian",
-    "solver_type": "Eigen::UmfPackLU",
-    "use_spline": true/false,
-    "n_refs": 1,
-    "export": {
-        "vis_mesh": "solution.vtu"
-    }
-}
-```
 **Note** if you have Pardiso installed, remove `"solver_type": "Eigen::UmfPackLU",` from the JSON file to fallback to the default Pardiso solver.
 
 then run Polyfem with
@@ -72,70 +39,6 @@ then run Polyfem with
 ./PolyFEM_bin --json <path to the json> --cmd
 ```
 You can then see the *solution.vtu* using Paraview.
-
-# Python
-
-We created a simple [jupyter notebook](https://github.com/polyfem/Poly-Spline-Finite-Element-Method/blob/master/Poly-Spline-Finite-Element-Method.ipynb) with an example to generate Fig 13.
-
-:exclamation: The problem *FrankeOld* is not yet available on the conda version of Polyfem. This however doesn't change how to use Polyfem, stay tuned for updates.
-
-
-## Binder
-
-This notebook can be interactively run with binder! It is a free service and it is slow.
-
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/polyfem/Poly-Spline-Finite-Element-Method/master?filepath=Poly-Spline-Finite-Element-Method.ipynb)
-
-
-## Local run
-
-Install conda form [https://anaconda.org](https://anaconda.org) or a minimal version [miniconda](https://docs.conda.io/en/latest/miniconda.html).
-It is a python package manager.
-
-### Simple install
-
-Create a conda environment directly from the environment file
-```bash
-conda env create -f environment.yml
-```
-then activate the new environment
-```bash
-conda activate polyspline
-```
-and launch the notebook
-```bash
-jupyter notebook
-```
-to run the examples.
-[Here](https://jupyter-notebook.readthedocs.io/en/stable/examples/Notebook/Running%20Code.html) you can find a intro to jupyter notebooks.
-
-### Advanced install
-
-Create an environnement
-```bash
-conda create -n polyspline
-```
-activate it
-```bash
-conda activate polyspline
-```
-and add [conda forge](https://conda-forge.org) to the package manager channels
-```bash
-conda config --add channels conda-forge
-```
-
-At this point you can install all packages
-```bash
-conda install numpy
-conda install meshplot
-conda install polyfempy
-conda install plotly
-conda install jupyter
-```
-and launch the notebook
-```bash
-jupyter notebook
-```
 
 # Dependencies
 
