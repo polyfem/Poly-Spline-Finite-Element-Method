@@ -5,16 +5,16 @@
             "normalize_mesh": true
         },
         "mesh": "meshes/cup.HYBRID",
-        "surface_selection": 1,
-        "n_refs": 1
+        "n_refs": 1,
+        "surface_selection": 1
     },
     "tests": {
-        "err_h1": 1.095094756180249,
-        "err_h1_semi": 1.0381793950150513,
-        "err_l2": 0.3484480862046181,
-        "err_linf": 1.2195170973138332,
-        "err_linf_grad": 2.4854009867956273,
-        "err_lp": 0.7553350746811552,
+        "err_h1": 0.38134487667847167,
+        "err_h1_semi": 0.3662381805396655,
+        "err_l2": 0.10627092774561693,
+        "err_linf": 1.0462420377591952,
+        "err_linf_grad": 1.0462420377591952,
+        "err_lp": 0.4623442416375031,
         "margin": 1e-05,
         "time_steps": "static"
     }
