@@ -46,11 +46,11 @@ You can then see the *solution.vtu* using Paraview.
 
 All figures where generated with [PolyFEM](https://github.com/polyfem/polyfem). Refer to the [turorial](https://polyfem.github.io/tutorial/) and the [JSON api](https://polyfem.github.io/documentation/) for details.
 
-Make sure that [PARDISO](https://www.pardiso-project.org/) is found and enabled, otherwise you might not be able to generate certain figures (see below). In PolyFEM, `FindPardiso.cmake` will look for the PARDISO library in `~/.local` or `~/.pardiso`. If you installed PARDISO in a different location, you may need to update this file accordingly.
+Make sure that [PARDISO](https://panua.ch) is found and enabled, otherwise you might not be able to generate certain figures (see below). In PolyFEM, `FindPardiso.cmake` will look for the PARDISO library in `~/.local` or `~/.pardiso`. If you installed PARDISO in a different location, you may need to update this file accordingly.
 
 ## Solver
 
-As stated in the paper, we use [PARDISO](https://www.pardiso-project.org/) for the all figures.
+As stated in the paper, we use [PARDISO](https://panua.ch) for the all figures.
 
 If you use the python version (or don't have PARDISO), polyfem will fallback to the algebraic multigrid solver [HYPRE](https://computing.llnl.gov/projects/hypre-scalable-linear-solvers-multigrid-methods).
 
